@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://zephyr-self.vercel.app'),
   title: "Zephyr - Beautiful Weather App",
   description: "Real-time weather updates with beautiful UI and 24h forecast. Download now!",
+  icons: {
+    icon: '/icon/zephyr-icon.png',
+    shortcut: '/icon/zephyr-icon.png',
+    apple: '/icon/zephyr-icon.png',
+  },
   keywords: [
     "weather app",
     "weather forecast",
