@@ -36,9 +36,10 @@ export const metadata: Metadata = {
     siteName: "Zephyr App",
     images: [
       {
-        url: "https://zephyr-self.vercel.app/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "https://zephyr-self.vercel.app/icon/zephyr-icon.png",
+        width: 512,
+        height: 512,
+        alt: "Zephyr Weather App Logo",
       },
     ],
     locale: "en_US",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zephyr - Beautiful Weather App",
     description: "Real-time weather updates with beautiful UI and 24h forecast.",
-    images: ["https://zephyr-self.vercel.app/og-image.jpg"],
+    images: ["https://zephyr-self.vercel.app/icon/zephyr-icon.png"],
   },
   robots: {
     index: true,
