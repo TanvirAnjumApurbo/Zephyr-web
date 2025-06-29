@@ -13,10 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://zephyr-web.vercel.app'),
-  title: "Zephyr Weather App - Experience Weather Like Never Before",
-  description:
-    "Beautiful weather app with real-time updates, global coverage, and 24-hour forecasts. Download Zephyr for accurate weather predictions and stunning visualizations.",
+  metadataBase: new URL('https://zephyr-self.vercel.app'),
+  title: "Zephyr - Beautiful Weather App",
+  description: "Real-time weather updates with beautiful UI and 24h forecast. Download now!",
   keywords: [
     "weather app",
     "weather forecast",
@@ -31,17 +30,15 @@ export const metadata: Metadata = {
   creator: "Tanvir Anjum Apurbo",
   publisher: "Zephyr Weather App",
   openGraph: {
-    title: "Zephyr Weather App - Experience Weather Like Never Before",
-    description:
-      "Beautiful weather app with real-time updates, global coverage, and 24-hour forecasts.",
-    url: "https://zephyr-web.vercel.app",
-    siteName: "Zephyr Weather App",
+    title: "Zephyr - Beautiful Weather App",
+    description: "Real-time weather updates with beautiful UI and 24h forecast. Download now!",
+    url: "https://zephyr-self.vercel.app/",
+    siteName: "Zephyr App",
     images: [
       {
-        url: "/icon/zephyr-icon.png",
-        width: 512,
-        height: 512,
-        alt: "Zephyr Weather App Logo",
+        url: "https://zephyr-self.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
       },
     ],
     locale: "en_US",
@@ -49,10 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zephyr Weather App - Experience Weather Like Never Before",
-    description:
-      "Beautiful weather app with real-time updates, global coverage, and 24-hour forecasts.",
-    images: ["/icon/zephyr-icon.png"],
+    title: "Zephyr - Beautiful Weather App",
+    description: "Real-time weather updates with beautiful UI and 24h forecast.",
+    images: ["https://zephyr-self.vercel.app/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -69,7 +65,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://zephyr-web.vercel.app",
+    canonical: "https://zephyr-self.vercel.app",
   },
   category: "technology",
 };
