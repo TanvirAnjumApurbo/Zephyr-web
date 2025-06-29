@@ -20,7 +20,7 @@ A beautiful, responsive landing page for the Zephyr Weather App built with Next.
 
 ## 📱 Live Demo
 
-🔗 **[Visit Zephyr Website](https://your-vercel-url.vercel.app)**
+🔗 **[Visit Zephyr Website](https://zephyr-self.vercel.app/)**
 
 ## 🛠️ Local Development
 
