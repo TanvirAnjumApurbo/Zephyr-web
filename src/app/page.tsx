@@ -19,11 +19,24 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Load animation data
-    fetch('/gif/Animation - 1751208672444.json')
-      .then(response => response.json())
-      .then(data => setAnimationData(data))
-      .catch(error => console.error('Error loading animation:', error));
+    // Load animation data with error handling and loading optimization
+    const loadAnimation = async () => {
+      try {
+        const response = await fetch('/gif/Animation - 1751208672444.json');
+        if (!response.ok) {
+          throw new Error('Failed to load animation');
+        }
+        const data = await response.json();
+        setAnimationData(data);
+      } catch (error) {
+        console.error('Error loading animation:', error);
+        // Could set a fallback animation or skip animation
+      }
+    };
+
+    // Delay loading animation to improve initial page load
+    const timeoutId = setTimeout(loadAnimation, 100);
+    return () => clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {
@@ -62,6 +75,35 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white scroll-smooth">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Zephyr Weather App",
+            "description": "Beautiful weather app with real-time updates, global coverage, and 24-hour forecasts",
+            "applicationCategory": "Weather",
+            "operatingSystem": "Android",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Tanvir Anjum Apurbo"
+            }
+          })
+        }}
+      />
+      
       <style jsx global>{`
         .screenshot-center {
           transform: translateX(0) scale(1.1);

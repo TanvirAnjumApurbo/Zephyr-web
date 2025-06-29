@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zephyr-web.vercel.app/sitemap.xml
+
+# Block unnecessary crawling
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.*\.json$
